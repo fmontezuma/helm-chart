@@ -1,0 +1,7 @@
+dependencies:
+  - name: ingress-nginx
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/
+  - name: dashboard
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/

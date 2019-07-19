@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: aws-auth
   namespace: kube-system
-data: {{ tpl .Values.auth-data . | nindent 2 }}
+data: {{ tpl .Values.authData . | nindent 2 }}

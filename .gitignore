@@ -3,11 +3,3 @@
 
 # Requirements lock
 **/*.lock
-
-# Dependencies already built
-dashboard-0.1.0.tgz
-eks-0.1.0.tgz
-ingress-nginx-0.1.0.tgz
-k8s-common-0.1.0.tgz
-k8s-common-0.1.1.tgz
-microservice-0.1.0.tgz

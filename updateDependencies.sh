@@ -1,6 +1,3 @@
 #!/bin/sh
-cd helm-chart-sources/k8s-common
-helm dependency update
-cd ../..
-helm package helm-chart-sources/*
+for dir in helm-chart-sources/*; do (helm package -u "$dir"); done
 helm repo index --url https://fmontezuma.github.io/helm-chart/ .

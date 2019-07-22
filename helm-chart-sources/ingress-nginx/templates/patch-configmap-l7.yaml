@@ -10,7 +10,7 @@ data:
   use-proxy-protocol: "false"
   use-forwarded-headers: "true"
   proxy-body-size: "8m"
-  proxy-buffer-size: ""16k"
+  proxy-buffer-size: "16k"
 
   #proxy-real-ip-cidr: "0.0.0.0/0" # restrict this to the IP addresses of ELB
   #keep-alive: "300"

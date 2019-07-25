@@ -113,13 +113,8 @@ spec:
         ports:
         - containerPort: 8443
           protocol: TCP
-        - containerPort: 9090
-          protocol: TCP
         args:
-          #- --auto-generate-certificates
-          - --insecure-port=9090
-          - --insecure-bind-address=0.0.0.0
-          - --enable-insecure-login=true
+          - --auto-generate-certificates
           - --enable-skip-login=true
           - --token-ttl=0
           # Uncomment the following line to manually specify Kubernetes API server Host
@@ -136,7 +131,7 @@ spec:
           httpGet:
             scheme: HTTP
             path: /
-            port: 9090
+            port: 8443
           initialDelaySeconds: 30
           timeoutSeconds: 30
         resources:
@@ -170,7 +165,8 @@ metadata:
   namespace: kube-system
 spec:
   ports:
-    - port: 80
-      targetPort: 9090
+    - name: "https"
+      port: 443
+      targetPort: 8443
   selector:
     k8s-app: kubernetes-dashboard

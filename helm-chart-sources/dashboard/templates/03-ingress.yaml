@@ -1,9 +1,9 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  #annotations:
-  #  ingress.kubernetes.io/force-ssl-redirect: "true"
-  #  nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+  annotations:
+    ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
   name: dashboard-ingress
   namespace: kube-system
 spec:
@@ -13,4 +13,4 @@ spec:
       paths:
       - backend:
           serviceName: kubernetes-dashboard
-          servicePort: 80
+          servicePort: 443

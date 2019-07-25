@@ -3,7 +3,16 @@ entries:
   dashboard:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.7638856-03:00
+    created: 2019-07-25T11:33:33.9726907-03:00
+    description: A Helm chart for Kubernetes
+    digest: 3eea1702900cdfbd241be738af154b7cd184390f471b292d4a2efe632ecd9e96
+    name: dashboard
+    urls:
+    - https://fmontezuma.github.io/helm-chart/dashboard-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-07-25T11:33:33.971687-03:00
     description: A Helm chart for Kubernetes
     digest: a99ae78767daa2e414e81e91ac3224f119cf3f7b7b0c5015b63b487a636ab971
     name: dashboard
@@ -12,7 +21,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.7628801-03:00
+    created: 2019-07-25T11:33:33.971687-03:00
     description: A Helm chart for Kubernetes
     digest: eaf8686658e0baba386a83aa63ee7e112aec7a907d348b207a9f810d4ad34fc8
     name: dashboard
@@ -22,7 +31,7 @@ entries:
   eks:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.764881-03:00
+    created: 2019-07-25T11:33:33.9736909-03:00
     description: A Helm chart for Kubernetes
     digest: ec2750a45ccf6cd0fe3cbb86114aba95413bc33b9fe1225284d3717d9bc98a70
     name: eks
@@ -31,7 +40,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.764881-03:00
+    created: 2019-07-25T11:33:33.9736909-03:00
     description: A Helm chart for Kubernetes
     digest: d0479907c0474e931f0354d228773bf7e81ce7793d1391d7f975b31ef2997d72
     name: eks
@@ -41,7 +50,7 @@ entries:
   ingress-nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.7658812-03:00
+    created: 2019-07-25T11:33:33.9746903-03:00
     description: A Helm chart for Kubernetes
     digest: c588b7a1bf64113b174058ea86e63e7b96b9e011b83ba5e0bd4d025e0f9f082e
     name: ingress-nginx
@@ -50,7 +59,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.764881-03:00
+    created: 2019-07-25T11:33:33.9746903-03:00
     description: A Helm chart for Kubernetes
     digest: a851c96c5e0302a218bcd6d2b4a12bce2bd31bfb167e08e51abc520b4788830d
     name: ingress-nginx
@@ -60,7 +69,16 @@ entries:
   k8s-common:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.7698801-03:00
+    created: 2019-07-25T11:33:33.980716-03:00
+    description: A Helm chart for Kubernetes
+    digest: 4603189e24dec337405569541a48da232e493648e37239964b6d87c523110c4c
+    name: k8s-common
+    urls:
+    - https://fmontezuma.github.io/helm-chart/k8s-common-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-07-25T11:33:33.9796878-03:00
     description: A Helm chart for Kubernetes
     digest: 263b8326ba5ce38a820f40060ae696b09643b70d31e1e119104d4228c620670e
     name: k8s-common
@@ -69,7 +87,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.7678796-03:00
+    created: 2019-07-25T11:33:33.9786932-03:00
     description: A Helm chart for Kubernetes
     digest: d6dcae925c92e622eb3cc2de3efdb809fbbce7a257de88e440f5407636b28e9e
     name: k8s-common
@@ -78,7 +96,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.7668804-03:00
+    created: 2019-07-25T11:33:33.9756896-03:00
     description: A Helm chart for Kubernetes
     digest: 07d1a2d82057e390be7b42ee0331e637ea5f8405bb3b21f314d8a0a9fec8490f
     name: k8s-common
@@ -87,11 +105,11 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-25T11:19:56.7668804-03:00
+    created: 2019-07-25T11:33:33.9756896-03:00
     description: A Helm chart for Kubernetes
     digest: 96a83fd8c8a970a120571c8ba77fd2f9b58a06c8486ddb6e4945c754d711b215
     name: k8s-common
     urls:
     - https://fmontezuma.github.io/helm-chart/k8s-common-0.1.1.tgz
     version: 0.1.1
-generated: 2019-07-25T11:19:56.7618819-03:00
+generated: 2019-07-25T11:33:33.9706868-03:00

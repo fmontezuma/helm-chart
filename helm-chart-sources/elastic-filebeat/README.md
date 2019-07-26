@@ -1,1 +1,0 @@
-# helm-elastic-filebeat

@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: polaris-ingress
+  namespace: kube-system
+spec:
+  rules:
+  - host: polaris.{{ .Values.dnsSuffix }}
+    http:
+      paths:
+      - backend:
+          serviceName: polaris
+          servicePort: 80

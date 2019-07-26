@@ -22,4 +22,7 @@ dependencies:
     repository: https://fmontezuma.github.io/helm-chart/
   - name: polaris
     version: 0.1.2
+    repository: https://fmontezuma.github.io/helm-chart
+  - name: filebeat
+    version: 0.1.0
     repository: https://fmontezuma.github.io/helm-chart/

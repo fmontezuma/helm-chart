@@ -3,7 +3,7 @@ entries:
   autoscaler:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2209-03:00
+    created: 2019-07-26T15:09:38.5854546-03:00
     description: A Helm chart for Kubernetes
     digest: a90da3e72f36605104a1731d36145c8231d665e5948e3d64da2d148e6fc88148
     name: autoscaler
@@ -13,7 +13,7 @@ entries:
   dashboard:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2209-03:00
+    created: 2019-07-26T15:09:38.5864561-03:00
     description: A Helm chart for Kubernetes
     digest: 64629433130674aa3ccae563665396faced7bee51b26551f178f76122c35de5e
     name: dashboard
@@ -23,7 +23,7 @@ entries:
   eks:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2219033-03:00
+    created: 2019-07-26T15:09:38.5864561-03:00
     description: A Helm chart for Kubernetes
     digest: ec2750a45ccf6cd0fe3cbb86114aba95413bc33b9fe1225284d3717d9bc98a70
     name: eks
@@ -33,7 +33,7 @@ entries:
   ingress-nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2219033-03:00
+    created: 2019-07-26T15:09:38.5864561-03:00
     description: A Helm chart for Kubernetes
     digest: c588b7a1bf64113b174058ea86e63e7b96b9e011b83ba5e0bd4d025e0f9f082e
     name: ingress-nginx
@@ -43,7 +43,16 @@ entries:
   istio:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2288991-03:00
+    created: 2019-07-26T15:09:38.5964549-03:00
+    description: A Helm chart for Kubernetes
+    digest: e3a80a88b4150af1cfa7c91e88ac6d7f21934d8dfda5f05f4d444deb4c4429f4
+    name: istio
+    urls:
+    - https://fmontezuma.github.io/helm-chart/istio-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-07-26T15:09:38.5904542-03:00
     description: A Helm chart for Kubernetes
     digest: 599bb70f1bf687ed798be88842ba01ad167c13f80f9c296f4cc63b6b2cde2dec
     name: istio
@@ -52,7 +61,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2238993-03:00
+    created: 2019-07-26T15:09:38.588453-03:00
     description: A Helm chart for Kubernetes
     digest: 0d390a9380cfcdacf75b83a3b326785121888455fc8236dbb9f2795dd45f3a5d
     name: istio
@@ -62,7 +71,16 @@ entries:
   k8s-common:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2328974-03:00
+    created: 2019-07-26T15:09:38.6104539-03:00
+    description: A Helm chart for Kubernetes
+    digest: 887761087d56293952d980148f1d6ad4993312adedb7a84e6d18b1a85fb03b3a
+    name: k8s-common
+    urls:
+    - https://fmontezuma.github.io/helm-chart/k8s-common-0.1.12.tgz
+    version: 0.1.12
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-07-26T15:09:38.6024576-03:00
     description: A Helm chart for Kubernetes
     digest: 29a394214196841780275c3276b42331a202573346cbdda46baa1d66e9e8d38e
     name: k8s-common
@@ -71,11 +89,11 @@ entries:
     version: 0.1.11
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-07-26T14:52:45.2308988-03:00
+    created: 2019-07-26T15:09:38.5994577-03:00
     description: A Helm chart for Kubernetes
     digest: fb2d8b7f0039543d4644941b036381b8dd9dcc977b8631212a1947d100d461db
     name: k8s-common
     urls:
     - https://fmontezuma.github.io/helm-chart/k8s-common-0.1.10.tgz
     version: 0.1.10
-generated: 2019-07-26T14:52:45.2199008-03:00
+generated: 2019-07-26T15:09:38.5844533-03:00

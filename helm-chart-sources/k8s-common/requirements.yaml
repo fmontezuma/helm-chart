@@ -14,3 +14,12 @@ dependencies:
   - name: istio
     version: 0.1.4
     repository: https://fmontezuma.github.io/helm-chart/
+  - name: metrics-server
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/
+  - name: heapster
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/
+  - name: polaris
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/

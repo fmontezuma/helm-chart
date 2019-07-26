@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: polaris-ingress
-  namespace: kube-system
+  namespace: polaris
 spec:
   rules:
   - host: polaris.{{ .Values.dnsSuffix }}

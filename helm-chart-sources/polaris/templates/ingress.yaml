@@ -9,5 +9,5 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: polaris
+          serviceName: polaris-dashboard
           servicePort: 80

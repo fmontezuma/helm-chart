@@ -29,3 +29,6 @@ dependencies:
   - name: apm
     version: 0.1.0
     repository: https://fmontezuma.github.io/helm-chart/
+  - name: metricbeat
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/

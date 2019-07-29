@@ -1,0 +1,107 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: apm-server
+  labels:
+    name: apm-server
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apm-server-config
+  namespace: apm-server
+  labels:
+    k8s-app: apm-server
+data:
+  apm-server.yml: |-
+    apm-server:
+      host: "0.0.0.0:8200"
+    output.elasticsearch:
+      hosts: ["{{ .Values.host }}:{{ .Values.port }}"]
+      protocol: "{{ .Values.protocol }}"
+      username: "{{ .Values.username }}"
+      password: "{{ .Values.password }}"
+      indices:
+        - index: "apm-%{[observer.version]}-sourcemap"
+          when.contains:
+            processor.event: "sourcemap"
+
+        - index: "apm-%{[observer.version]}-error-%{+yyyy.MM.dd}"
+          when.contains:
+            processor.event: "error"
+
+        - index: "apm-%{[observer.version]}-transaction-%{+yyyy.MM.dd}"
+          when.contains:
+            processor.event: "transaction"
+
+        - index: "apm-%{[observer.version]}-span-%{+yyyy.MM.dd}"
+          when.contains:
+            processor.event: "span"
+
+        - index: "apm-%{[observer.version]}-metric-%{+yyyy.MM.dd}"
+          when.contains:
+            processor.event: "metric"
+
+        - index: "apm-%{[observer.version]}-onboarding-%{+yyyy.MM.dd}"
+          when.contains:
+            processor.event: "onboarding"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apm-server
+  namespace: apm-server
+  labels:
+    app: apm-server
+spec:
+  ports:
+  - port: 8200
+    targetPort: 8200
+    name: http
+  selector:
+    app: apm-server
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: apm-server
+  namespace: apm-server
+spec:
+  # this replicas value is default
+  # modify it according to your case
+  #replicas: 1
+  template:
+    metadata:
+      labels:
+        app: apm-server
+    spec:
+      containers:
+      - name: apm-server
+        image: docker.elastic.co/apm/apm-server:7.1.0
+        ports:
+        - containerPort: 8200
+          name: apm-port
+        volumeMounts:
+        - name: apm-server-config
+          mountPath: /usr/share/apm-server/apm-server.yml
+          readOnly: true
+          subPath: apm-server.yml
+      volumes:
+      - name: apm-server-config
+        configMap:
+          name: apm-server-config
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: apm-server
+  namespace: apm-server
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: apm-server
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 60

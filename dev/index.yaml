@@ -3,7 +3,7 @@ entries:
   apm:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6817964-03:00
+    created: 2019-08-09T14:35:57.1554942-03:00
     description: A Helm chart for Kubernetes
     digest: 8e601132cbe4e17c30685d90a0e1f8da88ba8a142a51ffca9d4cacca8e80632f
     name: apm
@@ -13,7 +13,7 @@ entries:
   autoscaler:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6817964-03:00
+    created: 2019-08-09T14:35:57.1554942-03:00
     description: A Helm chart for Kubernetes
     digest: a90da3e72f36605104a1731d36145c8231d665e5948e3d64da2d148e6fc88148
     name: autoscaler
@@ -23,7 +23,7 @@ entries:
   dashboard:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6827614-03:00
+    created: 2019-08-09T14:35:57.1554942-03:00
     description: A Helm chart for Kubernetes
     digest: 64629433130674aa3ccae563665396faced7bee51b26551f178f76122c35de5e
     name: dashboard
@@ -33,7 +33,7 @@ entries:
   eks:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6827614-03:00
+    created: 2019-08-09T14:35:57.1564967-03:00
     description: A Helm chart for Kubernetes
     digest: ec2750a45ccf6cd0fe3cbb86114aba95413bc33b9fe1225284d3717d9bc98a70
     name: eks
@@ -43,7 +43,7 @@ entries:
   filebeat:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6827614-03:00
+    created: 2019-08-09T14:35:57.1564967-03:00
     description: A Helm chart for Kubernetes
     digest: 9a731f3aa953e8c044685af60748de02a9dd082ab18621bf24cf4db01f075544
     name: filebeat
@@ -53,7 +53,7 @@ entries:
   heapster:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6827614-03:00
+    created: 2019-08-09T14:35:57.1564967-03:00
     description: A Helm chart for Kubernetes
     digest: ea314e102127874bc1650d7b1ba7673b7bc476e4e70bb381446360455ac11c43
     name: heapster
@@ -63,7 +63,7 @@ entries:
   ingress-nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6848129-03:00
+    created: 2019-08-09T14:35:57.1574936-03:00
     description: A Helm chart for Kubernetes
     digest: 1c611a1ef7968a16436cc2c3b6738b71a78737cf6e642d5937a06d860ef0ccc5
     name: ingress-nginx
@@ -72,7 +72,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6837612-03:00
+    created: 2019-08-09T14:35:57.1574936-03:00
     description: A Helm chart for Kubernetes
     digest: c588b7a1bf64113b174058ea86e63e7b96b9e011b83ba5e0bd4d025e0f9f082e
     name: ingress-nginx
@@ -82,7 +82,16 @@ entries:
   istio:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6858118-03:00
+    created: 2019-08-09T14:35:57.169459-03:00
+    description: A Helm chart for Kubernetes
+    digest: 7af70fba3a6630fbaa7c7eab4c171e1d7ebaffd61086fcfd88f4678f7ca6b323
+    name: istio
+    urls:
+    - https://fmontezuma.github.io/helm-chart/istio-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-08-09T14:35:57.1604582-03:00
     description: A Helm chart for Kubernetes
     digest: adbae99806cda8eabd5a9f5e33fe8ec57d3895204fc3d80da07ac0ab18e0ff8b
     name: istio
@@ -92,7 +101,7 @@ entries:
   k8s-common:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6957598-03:00
+    created: 2019-08-09T14:35:57.1754634-03:00
     description: A Helm chart for Kubernetes
     digest: 0c267008cffa8ec52a21679789e7c521168f3626bed31557cf1187996fd41bef
     name: k8s-common
@@ -101,7 +110,7 @@ entries:
     version: 0.1.20
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.688759-03:00
+    created: 2019-08-09T14:35:57.1734627-03:00
     description: A Helm chart for Kubernetes
     digest: a599646c7c835643fec14e5663407d00968bcc0a560d714ad195b06c0ffaaf3b
     name: k8s-common
@@ -111,7 +120,7 @@ entries:
   metricbeat:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6967605-03:00
+    created: 2019-08-09T14:35:57.1764635-03:00
     description: A Helm chart for Kubernetes
     digest: c4b98d4927e664c47a206542615f4ed4b96b7ffec3ce95b70cfd517db70cab0b
     name: metricbeat
@@ -121,7 +130,7 @@ entries:
   metrics-server:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6967605-03:00
+    created: 2019-08-09T14:35:57.1764635-03:00
     description: A Helm chart for Kubernetes
     digest: c496afbe74a50a9fe66dc24ed1df1140a23cd37da664b979ca70fad155b76361
     name: metrics-server
@@ -131,7 +140,7 @@ entries:
   microservice:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6977799-03:00
+    created: 2019-08-09T14:35:57.1774638-03:00
     description: A Helm chart for Kubernetes
     digest: 571c612b9af6467bbef71e4d9ce041e46537291eef32877feb35c75055b9292b
     name: microservice
@@ -141,7 +150,7 @@ entries:
   polaris:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6997567-03:00
+    created: 2019-08-09T14:35:57.1784643-03:00
     description: A Helm chart for Kubernetes
     digest: 09d309f0ff2c7adb71b7c01d2ddb2f52095abe32dad6799cf5cdf84186e7ac9b
     name: polaris
@@ -150,11 +159,11 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-08-08T19:00:42.6987873-03:00
+    created: 2019-08-09T14:35:57.1774638-03:00
     description: A Helm chart for Kubernetes
     digest: adc1fa853033f0dcefe33c1dbe2dd7268a5edefa3bc524caaa59c0179ea3a3f1
     name: polaris
     urls:
     - https://fmontezuma.github.io/helm-chart/polaris-0.1.2.tgz
     version: 0.1.2
-generated: 2019-08-08T19:00:42.6807614-03:00
+generated: 2019-08-09T14:35:57.154494-03:00

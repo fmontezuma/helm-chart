@@ -64,7 +64,7 @@ entries:
     digest: eaf8686658e0baba386a83aa63ee7e112aec7a907d348b207a9f810d4ad34fc8
     name: dashboard
     urls:
-    - https://fmontezuma.github.io/helm-chart/prod/dashboard-0.1.0.tgz
+    - https://fmontezuma.github.io/helm-chart/prd/dashboard-0.1.0.tgz
     version: 0.1.0
   eks:
   - apiVersion: v1
@@ -185,7 +185,7 @@ entries:
     digest: a851c96c5e0302a218bcd6d2b4a12bce2bd31bfb167e08e51abc520b4788830d
     name: ingress-nginx
     urls:
-    - https://fmontezuma.github.io/helm-chart/prod/ingress-nginx-0.1.0.tgz
+    - https://fmontezuma.github.io/helm-chart/prd/ingress-nginx-0.1.0.tgz
     version: 0.1.0
   istio:
   - apiVersion: v1
@@ -367,7 +367,7 @@ entries:
     digest: 13a022c2edd9650c3adb7d56e32b2e2414ec4b87826502bcd05030d5b49998c9
     name: k8s-common
     urls:
-    - https://fmontezuma.github.io/helm-chart/prod/k8s-common-0.1.1.tgz
+    - https://fmontezuma.github.io/helm-chart/prd/k8s-common-0.1.1.tgz
     version: 0.1.1
   metricbeat:
   - apiVersion: v1

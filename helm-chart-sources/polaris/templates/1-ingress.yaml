@@ -5,7 +5,7 @@ metadata:
   namespace: polaris
 spec:
   rules:
-  - host: polaris.{{ .Values.dnsSuffix }}
+  - host: polaris{{ .Values.global.dnsSuffix }}
     http:
       paths:
       - backend:

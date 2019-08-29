@@ -5,7 +5,7 @@ metadata:
   namespace: istio-system
 spec:
   rules:
-  - host: kiali.{{ .Values.dnsSuffix }}
+  - host: kiali{{ .Values.global.dnsSuffix }}
     http:
       paths:
       - backend:

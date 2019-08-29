@@ -1,7 +1,9 @@
 appName: nginx
 env: dev
 namespace: default
-dnsSuffix: test.local
+
+global:
+  dnsSuffix: test.local
 
 #replicaCount: 1
 minReplicas: 1

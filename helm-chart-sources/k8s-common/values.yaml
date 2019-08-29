@@ -1,3 +1,2 @@
-
-dashboard:
+global:
   dnsSuffix: test.local

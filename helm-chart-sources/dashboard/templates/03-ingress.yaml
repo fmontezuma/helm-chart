@@ -8,7 +8,7 @@ metadata:
   namespace: kube-system
 spec:
   rules:
-  - host: dashboard.{{ .Values.dnsSuffix }}
+  - host: dashboard{{ .Values.global.dnsSuffix }}
     http:
       paths:
       - backend:

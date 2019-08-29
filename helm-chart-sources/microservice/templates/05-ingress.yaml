@@ -12,7 +12,7 @@ metadata:
   {{- end }}
 spec:
   rules:
-  - host: {{ .Values.appName }}-{{ .Values.namespace }}.{{ .Values.dnsSuffix }}
+  - host: {{ .Values.appName }}-{{ .Values.namespace }}{{ .Values.global.dnsSuffix }}
     http:
       paths:
       - backend:

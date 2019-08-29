@@ -1,1 +1,2 @@
-dnsSuffix: test.local
+global:
+  dnsSuffix: test.local

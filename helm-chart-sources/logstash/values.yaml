@@ -2,6 +2,10 @@ global:
   appName: test
   namespace: default
 
+minReplicas: 1
+maxReplicas: 1
+targetCPU: 60
+
 resources:
   requests:
     memory: 200Mi

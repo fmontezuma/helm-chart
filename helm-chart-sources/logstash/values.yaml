@@ -14,7 +14,23 @@ resources:
     memory: 200Mi
     cpu: "400m"
 
+readinessProbe:
+  tcpSocket:
+    port: 5959
+  initialDelaySeconds: 10
+  periodSeconds: 10
+livenessProbe:
+  tcpSocket:
+    port: 5959
+  initialDelaySeconds: 120
+  periodSeconds: 10
+
+extraCmds: ""
+
+environmentVariables:
+  LOG_LEVEL: "info"
+  XPACK_MONITORING_ENABLED: "false"
+
 config: |-
-  output {
-    stdout { }
-  }  
+  input { tcp { port => 5959 codec => json } }
+  output { stdout { } }  

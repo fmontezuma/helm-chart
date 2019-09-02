@@ -2,21 +2,21 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ .Values.appName }}
-  namespace: {{ .Values.namespace }}
+  name: {{ .Values.global.appName }}
+  namespace: {{ .Values.global.namespace }}
   labels:
-    app: {{ .Values.appName }}
+    app: {{ .Values.global.appName }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
   rules:
-  - host: {{ .Values.appName }}-{{ .Values.namespace }}{{ .Values.global.dnsSuffix }}
+  - host: {{ .Values.global.appName }}-{{ .Values.global.namespace }}{{ .Values.global.dnsSuffix }}
     http:
       paths:
       - backend:
-          serviceName: {{ .Values.appName }}
+          serviceName: {{ .Values.global.appName }}
           servicePort: {{ .Values.service.port }}
   {{- with .Values.ingress.additionalRules }}
     {{- toYaml .Values.ingress.additionalRules | nindent 2 }}

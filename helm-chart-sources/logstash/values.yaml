@@ -1,0 +1,16 @@
+global:
+  appName: test
+  namespace: default
+
+resources:
+  requests:
+    memory: 200Mi
+    cpu: "20m"
+  limits:
+    memory: 200Mi
+    cpu: "400m"
+
+config: |-
+  output {
+    stdout { }
+  }  

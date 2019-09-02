@@ -1,9 +1,12 @@
-appName: nginx
-env: dev
-namespace: default
-
 global:
-  dnsSuffix: test.local
+  dnsSuffix: test.local  
+  appName: nginx
+  namespace: default
+
+env: dev
+
+logstash:
+  enabled: false
 
 #replicaCount: 1
 minReplicas: 1
@@ -54,7 +57,7 @@ affinity: |-
           - key: app
             operator: In
             values:
-            - "{{ .Values.appName }}"
+            - "{{ .Values.global.appName }}"
     - weight: 99
       podAffinityTerm:
         topologyKey: "kubernetes.io/hostname"
@@ -63,4 +66,4 @@ affinity: |-
           - key: app
             operator: In
             values:
-            - "{{ .Values.appName }}"
+            - "{{ .Values.global.appName }}"

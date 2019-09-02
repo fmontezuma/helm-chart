@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.global.appName }}-logstash
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    app: {{ .Values.global.appName }}
+    name: logstash
+data:
+{{- with .Values.config }}
+  config:
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+    

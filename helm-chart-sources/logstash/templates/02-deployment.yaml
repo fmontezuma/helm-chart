@@ -47,7 +47,7 @@ spec:
       volumes:
       - name: logstash-volume
         configMap:
-          name: logstash
+          name: {{ .Values.global.appName }}-logstash
           items:
           - key: config
             path: logstash.conf

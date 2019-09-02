@@ -14,12 +14,13 @@ resources:
     memory: 200Mi
     cpu: "400m"
 
-readinessProbe:
+readinessProbe: |-
   tcpSocket:
     port: 5959
   initialDelaySeconds: 10
   periodSeconds: 10
-livenessProbe:
+  
+livenessProbe: |-
   tcpSocket:
     port: 5959
   initialDelaySeconds: 120

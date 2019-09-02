@@ -20,10 +20,10 @@ spec:
       containers:
         - name: logstash
           image: docker.elastic.co/logstash/logstash:6.5.0          
-          {{ if .Values.extraCmds }}
+          {{- if not (eq "" .Values.extraCmds) }}
           command: ["/bin/sh"]
-          args: ["-c", {{ .Values.extraCmds }} " && /usr/local/bin/docker-entrypoint"]
-          {{ end }}          
+          args: ["-c", "{{ .Values.extraCmds }} && /usr/local/bin/docker-entrypoint"]
+          {{- end }}
           {{- with .Values.resources }}
           resources:
             {{- toYaml . | nindent 12 }}
@@ -35,6 +35,7 @@ spec:
           {{- range $k, $v := . }}
           - name: {{ quote $k }}
             value: {{ quote $v }}
+          {{- end }}
           {{- end }}
           volumeMounts:
           - mountPath: "/usr/share/logstash/pipeline"

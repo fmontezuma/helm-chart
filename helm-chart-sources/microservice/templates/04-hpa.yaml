@@ -1,3 +1,4 @@
+{{- if eq .Values.dependenciesOnly false }}
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
@@ -11,3 +12,4 @@ spec:
   minReplicas: {{ .Values.minReplicas }}
   maxReplicas: {{ .Values.maxReplicas }}
   targetCPUUtilizationPercentage: {{ .Values.targetCPU }}
+{{- end }}

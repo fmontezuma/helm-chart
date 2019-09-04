@@ -5,6 +5,8 @@ global:
 
 env: dev
 
+dependenciesOnly: false
+
 logstash:
   enabled: false
 

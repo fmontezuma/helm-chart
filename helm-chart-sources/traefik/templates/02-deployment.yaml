@@ -13,6 +13,8 @@ spec:
       name: traefik
   template:
     metadata:
+      annotations:
+        checksum/config: {{ sha256sum .Values.config }}
       labels:
         app: {{ .Values.global.appName }}
         name: traefik
@@ -35,12 +37,10 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 10
           volumeMounts:
-          - mountPath: "/etc/traefik/traefik.toml"
-            name: traefik-volume
+          - name: traefik-volume
+            mountPath: "/etc/traefik/traefik.toml"
+            subPath: "traefik.toml"
       volumes:
       - name: traefik-volume
         configMap:
           name: {{ .Values.global.appName }}-traefik
-          items:
-          - key: config
-            path: traefik.toml

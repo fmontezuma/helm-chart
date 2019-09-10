@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Values.global.appName }}-traefik
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    app: {{ .Values.global.appName }}
+    name: traefik
+spec:
+  rules:
+  - host: {{ .Values.global.appName }}-traefik-{{ .Values.global.namespace }}{{ .Values.global.dnsSuffix }}
+    http:
+      paths:
+      - backend:
+          serviceName: {{ .Values.global.appName }}-traefik
+          servicePort: 8080

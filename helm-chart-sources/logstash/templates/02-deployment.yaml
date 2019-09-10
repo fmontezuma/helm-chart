@@ -13,6 +13,8 @@ spec:
       name: logstash
   template:
     metadata:
+      annotations:
+        checksum/config: {{ sha256sum .Values.config }}
       labels:
         app: {{ .Values.global.appName }}
         name: logstash

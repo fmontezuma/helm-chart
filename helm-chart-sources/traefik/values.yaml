@@ -15,4 +15,13 @@ resources:
     cpu: "400m"
 
 config: |-
+  logLevel = "INFO"
+  defaultEntryPoints = ["http"]
+  [entryPoints]
+  [entryPoints.http]
+  address = ":80"
+  [api]    
+  [file]
+  [frontends]
+  [backends]
   

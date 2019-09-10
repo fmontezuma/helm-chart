@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.global.appName }}-traefik
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    app: {{ .Values.global.appName }}
+    name: traefik
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.global.appName }}
+      name: traefik
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.global.appName }}
+        name: traefik
+    spec:
+      containers:
+        - name: traefik
+          image: traefik:1.7          
+          {{- with .Values.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          livenessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+          - mountPath: "/etc/traefik/traefik.toml"
+            name: traefik-volume
+      volumes:
+      - name: traefik-volume
+        configMap:
+          name: {{ .Values.global.appName }}-traefik
+          items:
+          - key: config
+            path: traefik.toml

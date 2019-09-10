@@ -10,6 +10,9 @@ dependenciesOnly: false
 logstash:
   enabled: false
 
+traefik:
+  enabled: false
+
 #replicaCount: 1
 minReplicas: 1
 maxReplicas: 5

@@ -1,0 +1,18 @@
+global:
+  dnsSuffix: "test.local"
+  namespace: default
+
+minReplicas: 1
+maxReplicas: 1
+targetCPU: 60
+
+resources:
+  requests:
+    memory: 200Mi
+    cpu: "20m"
+  limits:
+    memory: 200Mi
+    cpu: "400m"
+
+config: |-
+  

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.global.appName }}-traefik
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    app: {{ .Values.global.appName }}
+    name: traefik
+data:
+{{- with .Values.config }}
+  traefik.toml:
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+    

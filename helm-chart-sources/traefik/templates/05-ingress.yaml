@@ -8,6 +8,14 @@ metadata:
     name: traefik
 spec:
   rules:
+  {{- range .Values.ingressHosts }}
+  - host: {{ . }}
+    http:
+      paths:
+      - backend:
+          serviceName: {{ .Values.global.appName }}-traefik
+          servicePort: 80
+  {{- end }}  
   - host: {{ .Values.global.appName }}-traefik-{{ .Values.global.namespace }}{{ .Values.global.dnsSuffix }}
     http:
       paths:

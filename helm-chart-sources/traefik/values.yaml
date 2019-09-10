@@ -14,6 +14,10 @@ resources:
     memory: 200Mi
     cpu: "400m"
 
+ingressHosts:
+  - "*.traefik.local"
+  - "*.company.local"
+
 config: |-
   logLevel = "INFO"
   defaultEntryPoints = ["http"]

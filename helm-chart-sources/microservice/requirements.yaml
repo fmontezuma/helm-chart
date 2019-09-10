@@ -1,9 +1,9 @@
 dependencies:
   - name: logstash
-    version: 0.1.4
+    version: 0.1.5
     repository: https://fmontezuma.github.io/helm-chart/
     condition: logstash.enabled
   - name: traefik
-    version: 0.1.0
+    version: 0.1.1
     repository: https://fmontezuma.github.io/helm-chart/
     condition: traefik.enabled

@@ -1,4 +1,5 @@
 global:
+  appName: test
   dnsSuffix: "test.local"
   namespace: default
 

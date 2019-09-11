@@ -7,8 +7,5 @@ metadata:
     app: {{ .Values.global.appName }}
     name: logstash
 data:
-{{- with .Values.config }}
-  config:
-    {{- toYaml . | nindent 4 }}
-{{- end }}
+  config: {{ .Values.config | nindent 4 }}
     

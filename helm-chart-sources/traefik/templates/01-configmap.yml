@@ -7,5 +7,6 @@ metadata:
     app: {{ .Values.global.appName }}
     name: traefik
 data:
-  traefik.toml: {{ .Values.config | nindent 4 }}
+  traefik.toml: |
+  {{- .Values.config | nindent 4 }}
     

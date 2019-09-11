@@ -7,5 +7,6 @@ metadata:
     app: {{ .Values.global.appName }}
     name: logstash
 data:
-  config: {{ .Values.config | nindent 4 }}
+  config: |
+  {{- .Values.config | nindent 4 }}
     

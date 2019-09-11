@@ -1,3 +1,4 @@
+{{- $appName  := .Values.global.appName -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -13,7 +14,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: {{ .Values.global.appName }}-traefik
+          serviceName: {{ $appName }}-traefik
           servicePort: 80
   {{- end }}  
   - host: {{ .Values.global.appName }}-traefik-{{ .Values.global.namespace }}{{ .Values.global.dnsSuffix }}

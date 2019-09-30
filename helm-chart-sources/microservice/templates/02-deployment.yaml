@@ -27,6 +27,10 @@ spec:
             {{- end }}
           livenessProbe: {{ tpl .Values.livenessProbe . | nindent 12 }}
           readinessProbe: {{ tpl .Values.readinessProbe . | nindent 12 }}
+          {{- with .Values.lifecycle }}
+          lifecycle:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
           {{- with .Values.resources }}
           resources:
             {{- toYaml . | nindent 12 }}

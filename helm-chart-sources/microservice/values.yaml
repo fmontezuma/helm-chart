@@ -48,6 +48,7 @@ livenessProbe: |-
   periodSeconds: 10
 
 resources: {}
+lifecycle: {}
 nodeSelector: {}
 tolerations: []
 

@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: {{ .Values.global.appName }}
   namespace: {{ .Values.global.namespace }}
+  annotations:
+    currentDate: {{ now }}
   labels:
     app: {{ .Values.global.appName }}
 spec:
@@ -13,6 +15,8 @@ spec:
       app: {{ .Values.global.appName }}
   template:
     metadata:
+      annotations:
+        currentDate: {{ now }}
       labels:
         app: {{ .Values.global.appName }}
     spec:

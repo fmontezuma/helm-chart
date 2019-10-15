@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "overprovision"
+  name: "overprovisioner"
+  namespace: overprovisioner
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: overprovision
+      app: overprovisioner
   template:
     metadata:
       labels:
-        app: overprovision
+        app: overprovisioner
     spec:
-      priorityClassName: overprovision
+      priorityClassName: overprovisioner
       containers:
-        - name: overprovision
+        - name: overprovisioner
           image: "k8s.gcr.io/pause:3.1"
           imagePullPolicy: IfNotPresent
           resources:

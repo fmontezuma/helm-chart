@@ -1,0 +1,26 @@
+{{- if eq .Values.dependenciesOnly true }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.global.appName }}
+  namespace: {{ .Values.global.namespace }}
+  annotations:
+    currentDate: {{ now }}
+  labels:
+    app: {{ .Values.global.appName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.global.appName }}
+  template:
+    metadata:
+      annotations:
+        currentDate: {{ now }}
+      labels:
+        app: {{ .Values.global.appName }}
+    spec:
+      containers:
+        - name: {{ .Values.global.appName }}
+          image: "k8s.gcr.io/pause:3.1"
+{{- end }}

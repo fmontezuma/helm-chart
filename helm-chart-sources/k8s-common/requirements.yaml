@@ -9,7 +9,7 @@ dependencies:
     version: 0.1.1
     repository: https://fmontezuma.github.io/helm-chart/
   - name: autoscaler
-    version: 0.1.0
+    version: 0.1.1
     repository: https://fmontezuma.github.io/helm-chart/
   - name: istio
     version: 0.1.8
@@ -30,5 +30,8 @@ dependencies:
     version: 0.1.0
     repository: https://fmontezuma.github.io/helm-chart/
   - name: metricbeat
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/
+  - name: overprovisioner
     version: 0.1.0
     repository: https://fmontezuma.github.io/helm-chart/

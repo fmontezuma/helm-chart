@@ -147,6 +147,7 @@ spec:
             - --expander=least-waste
             - --node-group-auto-discovery=asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/{{ .Values.clusterName }}
             - --balance-similar-node-groups=true
+            - --expendable-pods-priority-cutoff=-10
           volumeMounts:
             - name: ssl-certs
               mountPath: /etc/ssl/certs/ca-certificates.crt

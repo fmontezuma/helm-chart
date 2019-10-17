@@ -171,5 +171,5 @@ spec:
       http:
         paths:
         - backend:
-          serviceName: kube-resource-report
-          servicePort: 80
+            serviceName: kube-resource-report
+            servicePort: 80

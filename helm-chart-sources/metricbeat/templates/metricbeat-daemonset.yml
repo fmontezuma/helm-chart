@@ -97,10 +97,10 @@ metadata:
   labels:
     k8s-app: metricbeat
 spec:
+  selector:
+    matchLabels:
+      k8s-app: metricbeat
   template:
-    selector:
-      matchLabels:
-        k8s-app: metricbeat
     metadata:
       labels:
         k8s-app: metricbeat

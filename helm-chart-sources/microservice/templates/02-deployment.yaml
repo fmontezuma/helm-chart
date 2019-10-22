@@ -10,6 +10,7 @@ metadata:
     app: {{ .Values.global.appName }}
 spec:
   #replicas: {{ .Values.replicaCount }}
+  progressDeadlineSeconds: {{ .Values.progressDeadlineSeconds }}
   selector:
     matchLabels:
       app: {{ .Values.global.appName }}

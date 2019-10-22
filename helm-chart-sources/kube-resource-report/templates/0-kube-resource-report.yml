@@ -67,7 +67,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: kube-resource-report
-  namespace: default
+  namespace: kube-report
 
 ---
 # Source: kube-resource-report/templates/service.yaml
@@ -110,20 +110,22 @@ spec:
         imagePullPolicy: IfNotPresent
         # environment variables
         args:
-        - --update-interval-minutes=1
+        - --update-interval-minutes=5
         - "--pricing-file=/pricing-file/pricing.csv"
         - /output
         volumeMounts:
         - mountPath: /output
           name: report-data
+        - mountPath: /tmp
+          name: tmp 
         - mountPath: /pricing-file/
           name: pricing-file
         resources:
           limits:
-            memory: 100Mi
+            memory: 300Mi
           requests:
-            cpu: 5m
-            memory: 50Mi
+            cpu: 15m
+            memory: 300Mi
           
         securityContext:
           readOnlyRootFilesystem: true
@@ -151,6 +153,9 @@ spec:
             memory: 20Mi
           
       volumes:
+        - name: tmp
+          emptyDir:
+            sizeLimit: 1000Mi
         - name: report-data
           emptyDir:
             sizeLimit: 500Mi
@@ -172,4 +177,4 @@ spec:
         paths:
         - backend:
             serviceName: kube-resource-report
-            servicePort: 80
+            servicePort: 8080

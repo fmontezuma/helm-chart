@@ -18,6 +18,8 @@ minReplicas: 1
 maxReplicas: 5
 targetCPU: 50
 
+progressDeadlineSeconds: 200
+
 image:
   repository: nginx
   tag: stable

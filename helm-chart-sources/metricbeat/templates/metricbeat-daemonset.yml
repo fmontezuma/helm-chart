@@ -98,6 +98,9 @@ metadata:
     k8s-app: metricbeat
 spec:
   template:
+    selector:
+      matchLabels:
+        k8s-app: metricbeat
     metadata:
       labels:
         k8s-app: metricbeat

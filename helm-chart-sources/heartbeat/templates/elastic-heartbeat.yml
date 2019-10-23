@@ -1,10 +1,11 @@
 apiVersion: v1
-kind: Configmap
+kind: ConfigMap
 metadata:
   name: heartbeat
   namespace: kube-system
 data:
-  heartbeat.yml: {{ toYaml .Values.config | indent 4 }}
+  heartbeat.yml: |
+    {{ toYaml .Values.config | indent 4 }}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -54,7 +55,7 @@ spec:
           mountPath: /usr/share/heartbeat/data
       volumes:
       - name: heartbeat-config
-        configmap:
+        configMap:
           name: heartbeat
       - name: data
         hostPath:

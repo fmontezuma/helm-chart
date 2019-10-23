@@ -38,3 +38,6 @@ dependencies:
   - name: kube-resource-report
     version: 0.1.3
     repository: https://fmontezuma.github.io/helm-chart/
+  - name: heartbeat
+    version: 0.1.0
+    repository: https://fmontezuma.github.io/helm-chart/

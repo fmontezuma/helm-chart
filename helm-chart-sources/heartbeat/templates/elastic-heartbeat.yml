@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 data:
   heartbeat.yml: |
-    {{ toYaml .Values.config | indent 4 }}
+    {{- toYaml .Values.config | indent 4 }}
 ---
 apiVersion: apps/v1
 kind: Deployment

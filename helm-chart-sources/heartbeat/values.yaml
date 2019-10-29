@@ -10,7 +10,7 @@ resources: {}
   #  cpu: 100m
   #  memory: 100Mi
   
-config:
+config: |-
   # See https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-reference-yml.html for reference
   heartbeat.monitors: []
 

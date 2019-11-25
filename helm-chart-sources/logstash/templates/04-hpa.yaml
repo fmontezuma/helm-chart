@@ -1,4 +1,4 @@
-apiVersion: autoscaling/v1
+apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: {{ .Values.global.appName }}-logstash
@@ -10,4 +10,12 @@ spec:
     name: {{ .Values.global.appName }}-logstash
   minReplicas: {{ .Values.minReplicas }}
   maxReplicas: {{ .Values.maxReplicas }}
-  targetCPUUtilizationPercentage: {{ .Values.targetCPU }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: {{ .Values.targetCPU }}
+  - type: Resource
+    resource:
+      name: memory
+      targetAverageUtilization: {{ .Values.targetMemory }}

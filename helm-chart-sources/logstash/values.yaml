@@ -5,6 +5,7 @@ global:
 minReplicas: 1
 maxReplicas: 1
 targetCPU: 60
+targetMemory: 75
 
 resources:
   requests:

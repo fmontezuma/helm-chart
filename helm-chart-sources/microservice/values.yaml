@@ -17,6 +17,7 @@ traefik:
 minReplicas: 1
 maxReplicas: 5
 targetCPU: 50
+targetMemory: 75
 
 progressDeadlineSeconds: 200
 

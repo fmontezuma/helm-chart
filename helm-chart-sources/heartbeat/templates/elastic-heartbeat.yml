@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: heartbeat
-        image: docker.elastic.co/beats/heartbeat:7.3.1
+        image: docker.elastic.co/beats/heartbeat:{{ .Values.version }}
         imagePullPolicy: IfNotPresent
         env:
         - name: POD_NAMESPACE

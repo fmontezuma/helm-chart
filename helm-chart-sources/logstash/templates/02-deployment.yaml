@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: logstash
-          image: docker.elastic.co/logstash/logstash:6.5.0          
+          image: docker.elastic.co/logstash/logstash:{{ .Values.version }}          
           {{- if not (eq "" .Values.extraCmds) }}
           command: ["/bin/sh"]
           args: ["-c", "{{ .Values.extraCmds }} && /usr/local/bin/docker-entrypoint"]

@@ -31,6 +31,9 @@ service:
   protocol: http
   additionalPorts: {}
 
+pod:
+  annotations: {}
+
 ingress:
   enabled: true
   annotations: {}

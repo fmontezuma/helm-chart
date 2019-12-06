@@ -32,7 +32,7 @@ service:
   additionalPorts: {}
 
 pod:
-  annotations: {}
+  annotations: |
 
 ingress:
   enabled: true

@@ -16,11 +16,8 @@ spec:
       app: {{ .Values.global.appName }}
   template:
     metadata:
-      annotations:
+      annotations: {{ .Values.pod.annotations | nindent 8 }}
         currentDate: {{ now }}
-        {{- with .Values.pod.annotations }}
-          {{- toYaml . | nindent 8 | quote }}
-        {{- end }}
       labels:
         app: {{ .Values.global.appName }}
     spec:

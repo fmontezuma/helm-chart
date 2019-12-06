@@ -33,7 +33,7 @@ environmentVariables:
   LOG_LEVEL: "info"
   XPACK_MONITORING_ENABLED: "false"
 
-version: "7.3.2"
+version: "7.5.0"
 
 config: |-
   input { tcp { port => 5959 codec => json } }

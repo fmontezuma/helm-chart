@@ -24,13 +24,13 @@ dependencies:
     version: 0.1.4
     repository: https://fmontezuma.github.io/helm-chart
   - name: filebeat
-    version: 0.1.5
+    version: 0.1.6
     repository: https://fmontezuma.github.io/helm-chart/
   - name: apm
-    version: 0.1.0
+    version: 0.1.1
     repository: https://fmontezuma.github.io/helm-chart/
   - name: metricbeat
-    version: 0.1.5
+    version: 0.1.6
     repository: https://fmontezuma.github.io/helm-chart/
   - name: overprovisioner
     version: 0.1.3
@@ -39,5 +39,5 @@ dependencies:
     version: 0.1.3
     repository: https://fmontezuma.github.io/helm-chart/
   - name: heartbeat
-    version: 0.1.5
+    version: 0.1.6
     repository: https://fmontezuma.github.io/helm-chart/

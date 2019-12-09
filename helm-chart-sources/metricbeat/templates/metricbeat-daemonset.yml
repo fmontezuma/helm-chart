@@ -52,8 +52,10 @@ data:
         - process
         - process_summary
         #- core
-        #- diskio
+        - diskio
+        - socket_summary
         #- socket
+      cpu.metrics: [percentages, normalized_percentages]
       processes: ['.*']
       process.include_top_n:
         by_cpu: 5      # include top 5 processes by CPU

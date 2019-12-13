@@ -66,9 +66,6 @@ data:
       metricsets:
         - filesystem
         - fsstat
-      processors:
-      - drop_event.when.regexp:
-          system.filesystem.mount_point: '^/(sys|cgroup|proc|dev|etc|host|lib)($|/)'
   kubernetes.yml: |-
     - module: kubernetes
       enabled: true

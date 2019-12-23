@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.global.appName }}
   namespace: {{ .Values.global.namespace }}
   annotations:
+    deployKey: {{ .Values.deployKey | default "NO_KEY" }}
     currentDate: {{ now }}
   labels:
     app: {{ .Values.global.appName }}

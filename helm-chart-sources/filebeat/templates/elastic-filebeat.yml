@@ -25,15 +25,11 @@ data:
     cloud.id: ${ELASTIC_CLOUD_ID}
     cloud.auth: ${ELASTIC_CLOUD_AUTH}
 
-    setup.template.name: "filebeat"
-    setup.template.pattern: "filebeat-*"
-
     output.elasticsearch:
       protocol: ${ELASTICSEARCH_PROTOCOL}
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       username: ${ELASTICSEARCH_USERNAME}
       password: ${ELASTICSEARCH_PASSWORD}
-      index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
 ---
 apiVersion: apps/v1
 kind: DaemonSet

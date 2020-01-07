@@ -1,43 +1,43 @@
 dependencies:
   - name: ingress-nginx
     version: 0.1.4
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: dashboard
     version: 0.1.5
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: eks
     version: 0.1.1
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: autoscaler
     version: 0.1.1
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   #- name: istio
   #  version: 0.1.8
-  #  repository: https://fmontezuma.github.io/helm-chart/
+  #  repository: http://catalog.shared.porto/api/prd/charts
   - name: metrics-server
     version: 0.1.0
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: heapster
     version: 0.1.0
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: polaris
     version: 0.1.4
-    repository: https://fmontezuma.github.io/helm-chart
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: filebeat
-    version: 0.1.6
-    repository: https://fmontezuma.github.io/helm-chart/
+    version: 0.1.7
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: apm
-    version: 0.1.1
-    repository: https://fmontezuma.github.io/helm-chart/
+    version: 0.1.2
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: metricbeat
     version: 0.1.8
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: overprovisioner
     version: 0.1.3
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: kube-resource-report
     version: 0.1.3
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
   - name: heartbeat
     version: 0.1.6
-    repository: https://fmontezuma.github.io/helm-chart/
+    repository: http://catalog.shared.porto/api/prd/charts
